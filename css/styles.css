@@ -989,6 +989,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   gap: var(--space-2);
   margin-bottom: var(--space-4);
+  flex-wrap: wrap;
 }
 .signature-typed-input {
   font-family: var(--font-script);
@@ -1002,6 +1003,27 @@ img { max-width: 100%; height: auto; display: block; }
   min-height: 80px;
 }
 .signature-typed-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.2); }
+
+/* Mobile signature pad improvements */
+@media (max-width: 480px) {
+  .signature-pad { height: 180px; }
+  .signature-type-toggle { justify-content: center; }
+  .signature-type-toggle .btn { flex: 1; min-width: 0; }
+  .signature-pad-toolbar { justify-content: center; }
+  .signature-pad-toolbar .btn { flex: 1; min-width: 0; }
+  .signature-typed-input { font-size: 2rem; min-height: 70px; padding: var(--space-3); }
+}
+
+@media (max-width: 360px) {
+  .signature-pad { height: 150px; }
+  .signature-typed-input { font-size: 1.75rem; min-height: 60px; }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .signature-pad { height: 120px; }
+  .signature-typed-input { font-size: 1.5rem; min-height: 50px; }
+}
 
 /* ========================================================================
    404
