@@ -1056,7 +1056,7 @@ img { max-width: 100%; height: auto; display: block; }
   .radio-group { gap: var(--space-2); }
 
   /* Start page form grid - stack on mobile */
-  #names-form > div[style*="grid-template-columns"] {
+  .names-grid {
     display: flex !important;
     flex-direction: column !important;
     gap: var(--space-4) !important;
@@ -1133,7 +1133,7 @@ img { max-width: 100%; height: auto; display: block; }
   .container { padding: 0 var(--space-4); }
 
   /* Start page form grid - stack on tablet too */
-  #names-form > div[style*="grid-template-columns"] {
+  .names-grid {
     display: flex !important;
     flex-direction: column !important;
     gap: var(--space-4) !important;
